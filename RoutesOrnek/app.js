@@ -4,12 +4,12 @@ const app = express();
 const bodyParser = require('body-parser');
 const path = require('path');
 
-//pug template engine kullanımı.
-app.set('view engine','pug');
-app.set('views','./views');
+app.set('view engine', 'pug');
+app.set('views', './views');
 
 const adminRoutes = require('./routes/admin');
-const userRoutes = require('./routes/user');
+const userRoutes = require('./routes/shop');
+
 const errorController = require('./controllers/errors');
 
 app.use(bodyParser.urlencoded({ extended: false }));
